@@ -14,6 +14,7 @@
 
     <form method="POST" action="<?= site_url('hunter/update/'.$hunters['id']) ?>">
         <?= csrf_field() ?>
+        <input type="hidden" name="_method" value="PATCH">
         <div class="form-group">
             <label for="nome_hunter">Nome:</label>
             <input type="text" class="form-control" name="nome_hunter" placeholder="Digite o nome do Hunter" maxlength="50" value="<?php echo $hunters['nome_hunter']; ?>">

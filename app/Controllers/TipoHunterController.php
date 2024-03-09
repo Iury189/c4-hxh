@@ -22,8 +22,8 @@ class TipoHunterController extends ResourceController
             return $this->failValidationErrors($this->validator->getErrors());
         }
         $tipo_hunter = new TipoHunterModel();
-        $data = $this->request->getJSON();
-        $id = $tipo_hunter->insert($data);
+        $dados = $this->request->getJSON();
+        $id = $tipo_hunter->insert($dados);
         $registro = $tipo_hunter->find($id);
         return $this->respondCreated($registro);
     }

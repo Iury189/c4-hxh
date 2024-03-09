@@ -178,7 +178,7 @@ class RecompensadoController extends BaseController
 
     public function searchTrash()
     {
-        $model = new HunterModel();
+        $model = new RecompensadoModel();
         $pesquisa = $this->request->getGet('search');
         $recompensados = [
             'recompensados' => $model->select('recompensados.id,
@@ -225,7 +225,6 @@ class RecompensadoController extends BaseController
         } else {
             return redirect()->to(route_to('trashRecompensado'))->with('warning', "Não é possível excluir o recompensado $nome permanentemente.");
         }
-        
     }
 
 }

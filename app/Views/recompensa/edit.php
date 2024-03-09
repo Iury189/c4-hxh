@@ -14,6 +14,7 @@
 
     <form method="POST" action="<?= site_url('recompensa/update/'.$recompensas['id']) ?>">
         <?= csrf_field() ?>
+        <input type="hidden" name="_method" value="PATCH">
         <div class="form-group">
             <label for="descricao_recompensa">Descrição:</label>
             <input type="text" class="form-control" name="descricao_recompensa" placeholder="Digite a descrição da recompensa" value="<?php echo $recompensas['descricao_recompensa']; ?>">

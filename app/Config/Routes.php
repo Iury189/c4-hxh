@@ -21,7 +21,7 @@ use App\Controllers\{Home,HunterController,RecompensaController,RecompensadoCont
 $routes->get('tipo-hunter', [TipoHunterController::class, 'index']);  
 $routes->post('tipo-hunter', [TipoHunterController::class, 'create']);
 $routes->get('tipo-hunter/(:num)', [TipoHunterController::class, 'show']);
-$routes->put('tipo-hunter/(:num)', [TipoHunterController::class, 'update']);
+$routes->patch('tipo-hunter/(:num)', [TipoHunterController::class, 'update']);
 $routes->delete('tipo-hunter/(:num)', [TipoHunterController::class, 'delete']);
 
 $routes->get('/', [HunterController::class, 'index'], ['as' => 'indexHunter']);
@@ -30,7 +30,7 @@ $routes->get('hunter/search', [HunterController::class, 'search']);
 $routes->post('hunter/store', [HunterController::class, 'store']);
 $routes->get('hunter/view/(:num)', [HunterController::class, 'view']);
 $routes->get('hunter/edit/(:num)', [HunterController::class, 'edit']);
-$routes->post('hunter/update/(:num)', [HunterController::class, 'update']);
+$routes->patch('hunter/update/(:num)', [HunterController::class, 'update']);
 $routes->delete('hunter/delete/(:num)', [HunterController::class, 'delete']);
 $routes->get('hunter/trash', [HunterController::class, 'onlyDeleted'], ['as' => 'trashHunter']);
 $routes->get('hunter/search-trash', [HunterController::class, 'searchTrash']);
@@ -45,7 +45,7 @@ $routes->get('recompensa/search-trash', [RecompensaController::class, 'searchTra
 $routes->post('recompensa/store', [RecompensaController::class, 'store']);
 $routes->get('recompensa/view/(:num)', [RecompensaController::class, 'view']);
 $routes->get('recompensa/edit/(:num)', [RecompensaController::class, 'edit']);
-$routes->post('recompensa/update/(:num)', [RecompensaController::class, 'update']);
+$routes->patch('recompensa/update/(:num)', [RecompensaController::class, 'update']);
 $routes->delete('recompensa/delete/(:num)', [RecompensaController::class, 'delete']);
 $routes->get('recompensa/trash', [RecompensaController::class, 'onlyDeleted'], ['as' => 'trashRecompensa']);
 $routes->get('recompensa/restore/(:num)', [RecompensaController::class, 'restoreDeleted']);
@@ -57,7 +57,7 @@ $routes->get('recompensado/search', [RecompensadoController::class, 'search']);
 $routes->post('recompensado/store', [RecompensadoController::class, 'store']);
 $routes->get('recompensado/view/(:num)', [RecompensadoController::class, 'view']);
 $routes->get('recompensado/edit/(:num)', [RecompensadoController::class, 'edit']);
-$routes->post('recompensado/update/(:num)', [RecompensadoController::class, 'update']);
+$routes->patch('recompensado/update/(:num)', [RecompensadoController::class, 'update']);
 $routes->delete('recompensado/delete/(:num)', [RecompensadoController::class, 'delete']);
 $routes->get('recompensado/trash', [RecompensadoController::class, 'onlyDeleted'], ['as' => 'trashRecompensado']);
 $routes->get('recompensado/search-trash', [RecompensadoController::class, 'searchTrash']);
